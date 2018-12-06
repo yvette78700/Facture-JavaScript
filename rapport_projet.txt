@@ -1,0 +1,28 @@
+Projet facture
+
+Introduction:
+Le projet facture consiste à réaliser une facture dynamique et responsive en utilisant JavaScript, sur une base HTML-CSS,
+en suivant les consignes données dans la notice.
+
+
+         PARTIE I:
+
+*   L'entete de la facture est composé d'un encart specifiant le nom et les coordonnées de la société emettrice.Créé au moyen d'input ,les placeholder permettent à l'utilisateur de savoir quel texte entrer dans les champs.
+
+*   Sur le même principe, l'input 'facture' permet d'entrer le numero de facture voulu.
+
+*   Le champ des dates est specifié en select, une liste déroulante qui propose plusieurs options au choix avec la date du jour par defaut, entrée au moyen de l'objet Date en JavaScript.
+
+
+           PARTIE II:
+
+*   Dans cette partie, deux blocs sont créés avec des selects et des inputs.Gérés en JavaScript, les selects proposent une liste de choix de clients.Lorsque le choix est fait, les inputs se remplissent automatiquement.
+La liste de clients a été créée à partir d'un objet Client dans lequel on a précisé les caractéristiques de chaque client de la liste.
+
+           PARTIE III:
+
+*   Ici, il s'agit d'un tableau dont la base est en html et les evenements en JavaScript.
+-la colonne "code produit" est composée de selects, qui laissent l'utilisateur faire son choix parmi une selection donnée dans une liste déroulante de produits, créée à partir de l'objet Produit.
+-les colonnes 'libellé' et 'prix unitaire' sont des champs qui se remplissent automatiquement lorsque le code produit est sélectionné. Pour cela, nous avons utilisé l'événement 'click' sur le code produit.
+-la quantité, à entrer directement par l'utilisateur, est un input également, et le montant en euros est calculé automatiquement grâce à l'évènement "change".
+L'event 'change' intervient losque la quantité commandée est saisie: le montant total, la tva, les frais de port, le total TTC, sont alors calculés à partir de la quantité ainsi entrée, et un message indiquant une remise de 5% , jusque là caché, apparait lorsque les conditions d'achat sont reunies.

@@ -1,0 +1,180 @@
+body{
+    margin:0;
+    padding:0;
+    font-size:100%;
+}
+
+@media(orientation:landscape)and(min-width: 480px){
+   section{
+        width: 460px;
+
+       
+    }
+
+     
+
+}
+@media(min-width:768px){ 
+    
+   section{
+        width: 750px;
+    
+    }
+
+}
+
+@media(min-width:992px){
+   section{
+        width: 970px;
+        
+}
+}
+@media(min-width:1200px){
+    section{
+        width:1170px;
+       
+}
+}
+
+
+
+
+section{
+    width:70%;
+    margin:auto;
+    background:grey;
+    padding:5px 40px;
+  
+}
+
+h1{
+    text-align: center;
+    font-size:200%;
+  
+}
+
+/* indentité et numero */
+
+
+.identite{
+    width:100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.identite input{
+    width:20%;
+   
+}
+.numero{
+
+    display: flex;
+    flex-direction: column;
+}
+
+.facture,.date{
+   
+    margin-left:83.5%; 
+} 
+
+    
+
+
+.facture input{
+    width: 39px;
+} 
+
+
+/* destinataire de la facture et adresse d'expedition de la facture */
+
+.clear{
+    clear: both;
+}
+.destinataire{
+ 
+    float: left;
+}
+.expediteur{
+  
+    float:right;
+}
+
+ .destinataire input,.expediteur input {
+    display: block;
+  padding:0 60px;
+}
+.expediteur select,.destinataire select{
+   width: 100%;
+} 
+caption{
+    font-family: 'Lora', serif;
+    font-weight:bold;
+    font-size:200%;
+}
+th{
+    font-family: 'Lora', serif;
+    border:1px solid ;
+border-collapse: collapse;
+}
+
+table:first-of-type{
+border:1px solid ;
+border-collapse: collapse;
+width:100%;
+
+}
+
+table:first-of-type td{
+ /* width:20%; */
+ border:1px solid ;
+border-collapse: collapse;
+height:30px;
+}
+
+table:last-of-type{
+    border-right: 1px solid;
+    border-collapse: collapse;
+    width: 100%;
+   
+    margin-top:40px;
+}
+
+
+td[colspan="4"]{
+width:80.5%;
+text-align: right;
+}
+
+#stotal,#tva,#port,#prixttc{
+    text-align: right;
+    font-weight: bolder;
+    font-size:120%;
+}
+#codepdt1 , #codepdt2 ,#codepdt3, #codepdt4 {
+    width:99%;
+   
+}
+td input{
+    text-align: right;
+    width: 99%;
+}
+.prix{
+    border: 1px solid;
+}
+
+section>p{
+height:50px;
+border:1px solid;
+text-align: center;
+display:none;
+}
+
+/* footer */
+
+
+
+footer p:last-of-type{
+    text-align:center;
+    font-weight: bold;
+}

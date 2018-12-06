@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FACTURE</title>
+    <link rel="stylesheet" href="facture.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+</head>
+<body>
+    <section>
+
+        <!-- partie 1 idententite de société emettrice de la facture -->
+
+        <h1>FACTURE</h1>
+        <div class="identite">
+            <input type="text" placeholder="Nom de la société">
+            <input type="text" placeholder="Adresse de la société">
+            <input type="text" placeholder="Entrez un numero de téléphone">
+            <input type="email" placeholder="Adresse de messagerie">
+        </div>
+        
+        <div class="numero">
+            <div class="facture">
+                    <label for="facture">N° DE LA FACTURE </label>
+                    <input type="text" id="facture" >
+            </div>
+            <div class="date">
+                    <label for="date">DATE : </label>
+
+                    <select >
+                        
+                    </select>
+                    <select  id="mois"></select>
+                    <select  id="annee"></select>
+                   
+            </div>
+            
+        </div>
+      
+        <!-- destinataire de la facture et adresse d'expedition de la facture -->
+        <div class="destinataire">
+            <h5>A</h5>
+            <select  id="nomClientD" >
+                
+            </select>
+            <input type="text" placeholder="Nom de la société" id="nsociete" >
+            <input type="text" placeholder="Nom " id="client" >  
+            <input type="text" placeholder="Rue" id="rue" >
+            <input type="text" placeholder="Code postal,Ville" id="ville" >
+            <input type="text" placeholder="numero de télephone" id="telephone" >
+        </div>
+
+        <div class="expediteur">
+            <h5>EXPEDIER A:</h5>
+            <select  id="nomClientE">
+                
+            </select>
+            <input type="text" placeholder="Nom de la société" id="nsocieteE">
+            <input type="text" placeholder="Nom " id="clientE"> 
+            <input type="text" placeholder="Rue" id="rueE">
+            <input type="text" placeholder="Code postal,Ville" id="villeE">
+            <input type="text" placeholder="numero de télephone" id="telephoneE">
+
+        </div>
+        <div class="clear"></div>
+
+        <table>
+            <caption>Détails des produits facturés</caption>
+            <thead>
+                <tr>
+                        <th>Code produit</th>
+                        <th>Libellé produit</th>
+                        <th>Prix - Unitaire en euros</th>
+                        <th>Quantité commandée</th>
+                        <th>Montant en euros</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select id="codepdt1"></select>
+                        </td>
+                        <td id="lib1"></td>
+                        <td id="prix1"></td>
+                        <td><input type="text" value="0" id="quantite"></td>
+                        <td id="prixht"></td>
+                    </tr>
+                    <tr>
+                                <td>
+                                <select  id="codepdt2"></select>
+                                </td>
+                                <td id="lib2"></td>
+                                <td id="prix2"></td>
+                                <td><input type="text" value="0" id="quantite1"></td>
+                                <td id="prixht1"></td>
+                    </tr>
+                    <tr>
+                            <td>
+                                <select  id="codepdt3"></select>
+                            </td>
+                            <td id="lib3"></td>
+                            <td id="prix3"></td>
+                            <td><input type="text" value="0" id="quantite2"></td>
+                            <td id="prixht2"></td>
+                    </tr>
+                    <tr>
+                            <td>
+                                <select id="codepdt4"></select>
+                            </td>
+                            <td id="lib4"></td>
+                            <td id="prix4"></td>
+                            <td><input type="text" value="0" id="quantite3"></td>
+                            <td id="prixht3"></td>
+                    </tr>
+                </tbody>
+               
+           
+        </table>
+
+
+        
+
+        <table>
+            <tbody>
+                <tr>
+                        <td colspan="4">SOUS-TOTAL</td>
+                        <td id="stotal"></td>
+                </tr>
+                <tr>
+                        <td colspan="4">T.V.A 20,00%</td>
+                        <td id="tva"></td>
+                </tr>
+
+                <tr>
+                        <td colspan="4">PORT & MANUTENTION</td>
+                        <td id="port"></td>
+                </tr>
+            <tr>
+                    <td colspan="4">TOTAL DU (TOTAL TTC)</td>
+                    <td id="prixttc"></td>
+            </tr>
+            </tbody>
+        </table>
+       <p id="remise">N.B votre facture a depassé 1000€,vous avez obtenu pour votre prochaine facture
+           une remise de: <span ></span>
+           représentant 5% de votre commande ci-dessus
+       </p>
+       <!-- footer -->
+        <footer>
+            <p id="cheque">Veillez rédiger tous les chèques à l'ordre de <span>Nom de la société</span></p>
+            <p id="contact">Pour toute question concernant cette facture ,veuillez contacter: DUPONT au 
+                <span>Numero de télephone</span> ou à l'adresse <span>adresse Email</span>
+
+            </p>
+            <p>Nous vous remercions de votre confiance</p>
+            <button onclick="window.print()">Inprimer la page</button>
+        </footer>
+    </section>
+
+
+    
+    
+     <script src="facture.js"></script>
+</body>
+</html>
