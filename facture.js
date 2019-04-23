@@ -85,7 +85,7 @@ for(var i = 0; i< tab.length; i++)
 
 }
 
-// remplit les champs au clic sur l'option à gauche
+// remplit les champs sur l'option à gauche
 function   remplissage (x){
 
       for(var i=0;i<tab.length;i++){
@@ -102,7 +102,16 @@ function   remplissage (x){
 
 }
 
-// remplit les champs au clic sur l'option à droite
+document.getElementById("nomClientD").addEventListener("change",function(){
+               
+           
+      var j =document.getElementById("nomClientD").value;
+
+      remplissage(j);
+            
+  } );
+
+// remplit les champs sur l'option à droite
 function   remplissage1 (x){
       for(var i=0;i<tab.length;i++){
 
@@ -118,18 +127,7 @@ function   remplissage1 (x){
 
 }
 
-// reinitialise les champs au clic sur nouveau client
 
-   document.getElementById("nomClientD").addEventListener("change",function(){
-               
-           
-      var j =document.getElementById("nomClientD").value;
-
-      remplissage(j);
-            
-  } );
-    
-    
 document.getElementById("nomClientE").addEventListener("change",function(){
                
            
@@ -325,6 +323,7 @@ document.getElementById("nomClientE").addEventListener("change",function(){
 
 // fonction qui calcule la tva
 //    les frais de ports et manutention est 5% du montant d'achat ttc
+
 
 function calcultva(x){
       return x*0.2;
